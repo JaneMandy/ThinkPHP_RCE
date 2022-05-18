@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ThinkPHP_Rce:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ThinkPHP_Rce_jar</output-path>
+    <root id="archive" name="ThinkPHP_Rce.jar">
+      <element id="module-output" name="ThinkPHP_Rce" />
+    </root>
+  </artifact>
+</component>

